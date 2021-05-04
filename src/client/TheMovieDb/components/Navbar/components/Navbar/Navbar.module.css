@@ -1,0 +1,15 @@
+.navbar {
+    background-color: rgb(179, 192, 1);
+}
+
+.container {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbarMenu {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}

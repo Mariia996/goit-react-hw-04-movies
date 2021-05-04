@@ -1,0 +1,18 @@
+.navbarMenuLink {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbarMenuLink:hover,
+.navbarMenuLink:focus {
+    color: rgb(212, 40, 169);
+}
+
+.navbarMenuItem:not(:last-child) {
+    margin-right: 10px;
+}
+
+.navbarMenuLinkActive {
+    color: rgb(212, 40, 169);
+}
