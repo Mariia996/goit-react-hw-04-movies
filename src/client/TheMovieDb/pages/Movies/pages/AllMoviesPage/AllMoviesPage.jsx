@@ -41,7 +41,6 @@ class AllMoviesPage extends Component {
 
     render() {
         const { movies, loading, error } = this.state;
-
         return (
             <div className={styles.container}>
                 {!loading && !error && <MoviesList movies={movies} />}

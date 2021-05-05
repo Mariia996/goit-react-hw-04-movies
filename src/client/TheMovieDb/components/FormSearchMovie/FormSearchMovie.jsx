@@ -34,7 +34,7 @@ class FormSearchMovie extends Component {
         const { handleChange, onSubmit } = this;
 
         return (
-            <form onSubmit={onSubmit} className="formField">
+            <form onSubmit={onSubmit} className={styles.formField}>
                 <input
                     type={fields.type}
                     name="query"
@@ -44,7 +44,7 @@ class FormSearchMovie extends Component {
                     autoComplete={fields.autocomplete}
                     autoFocus
                     placeholder={fields.placeholder}/>
-                <button type="submit" className="btn">Search</button>
+                <button type="submit" className={styles.btn}>Search</button>
             </form>
         )
     }

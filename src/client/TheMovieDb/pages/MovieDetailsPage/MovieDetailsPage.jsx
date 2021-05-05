@@ -12,6 +12,7 @@ import styles from './MovieDetailsPage.module.css';
 class MovieDetailsPage extends Component {
     state = {
         movie: [],
+        genres: [],
         error: null
     }
 
@@ -21,7 +22,8 @@ class MovieDetailsPage extends Component {
         movieRequest
             .then(response => {
                 this.setState({
-                    movie: response.data
+                    movie: response.data,
+                    genres: response.data.genres
                 })
             })
             .catch(error => {
@@ -33,21 +35,22 @@ class MovieDetailsPage extends Component {
 
     render() {
         const { cast, reviews } = routes;
-        const { movie, error } = this.state;
+        const { movie, error, genres } = this.state;
         const { movieId } = this.props.match.params;
+
 
         return(
             (<div className={styles.container}>
-                {!error && <SingleMoviePage movie={movie} history={this.props.history}/>}
+                {!error && <SingleMoviePage movie={movie} history={this.props.history} genres={genres} />}
                 {!error && (
                     <>
                     <p className={styles.additionalInformation}>Additional Information</p>
                         <ul className={styles.addInfoList}>
                             <li className={styles.addInfoItem}>
-                                <NavLink to={`/movies/${movieId}/cast`}>Cast</NavLink>
+                                <NavLink to={`/movies/${movieId}/cast`} className={styles.addInfoLink}>Cast</NavLink>
                             </li>
                             <li className={styles.addInfoItem}>
-                                <NavLink to={`/movies/${movieId}/reviews`}>Reviews</NavLink>
+                                <NavLink to={`/movies/${movieId}/reviews`} className={styles.addInfoLink}>Reviews</NavLink>
                             </li>
                         </ul>
 

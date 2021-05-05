@@ -1,0 +1,39 @@
+.formField {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.inputField {
+    width: 160px;
+    padding: 3px;
+    margin-right: 10px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 2px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inputField::placeholder {
+    font-size: 12px;
+}
+
+.inputField:hover,
+.inputField:focus {
+    border: 1px solid rgb(212, 40, 169);
+}
+
+.btn {
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 2px;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 12px;
+    line-height: 1.714;
+    color: rgb(29, 29, 29);
+    background-color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: rgb(212, 40, 169);
+}

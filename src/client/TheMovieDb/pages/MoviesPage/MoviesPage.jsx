@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import FormSearchMovie from '../Movies/components/FormSearchMovie/FormSearchMovie';
+import FormSearchMovie from '../../components/FormSearchMovie';
 import { searchMovieByName } from '../../service/movies';
 import MoviesList from '../Movies/components/AllMoviesList/MoviesList';
 
@@ -20,7 +20,6 @@ class MoviesPage extends Component {
             const searchMoviesRequest = searchMovieByName(query);
             searchMoviesRequest
                 .then(response => {
-                console.log(response);
                     this.setState({
                         movies: response.data.results,
                         loading: false
@@ -44,7 +43,7 @@ class MoviesPage extends Component {
     }
 
     render() {
-        const { movies, error, query } = this.state;
+        const { movies, error } = this.state;
         const { handleSubmit } = this;
 
         return(
