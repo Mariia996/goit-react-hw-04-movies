@@ -7,6 +7,8 @@ import SingleMoviePage from '../Movies/pages/SingleMoviePage';
 import MovieCast from '../Movies/pages/MovieCast';
 import MovieReviews from '../Movies/pages/MovieReviews';
 
+// import { useHistory } from "react-router-dom";
+
 import styles from './MovieDetailsPage.module.css';
 
 class MovieDetailsPage extends Component {
@@ -37,7 +39,6 @@ class MovieDetailsPage extends Component {
         const { cast, reviews } = routes;
         const { movie, error, genres } = this.state;
         const { movieId } = this.props.match.params;
-
 
         return(
             (<div className={styles.container}>
