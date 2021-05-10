@@ -46,6 +46,12 @@ class MovieReviews extends Component {
     }
 }
 
+MovieReviews.defaultProps = {
+    reviews: [],
+    totalResults: 0,
+    error: null
+}
+
 MovieReviews.propTypes = {
     reviews: PropTypes.array.isRequired,
     totalResults: PropTypes.number,

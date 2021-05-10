@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import FormSearchMovie from '../../components/FormSearchMovie';
 import { searchMovieByName } from '../../service/movies';
 import MoviesList from '../Movies/components/AllMoviesList/MoviesList';
+import PropTypes from 'prop-types';
 
 import styles from './MoviesPage.module.css';
 
@@ -54,6 +55,20 @@ class MoviesPage extends Component {
             </div>
          );
     }
+}
+
+MoviesPage.defaultProps = {
+    movies: [],
+    error: null,
+    loading: false,
+    query: ""
+}
+
+MoviesPage.propTypes = {
+    movies: PropTypes.array.isRequired,
+    error: PropTypes.object,
+    loading: PropTypes.bool.isRequired,
+    query: PropTypes.string
 }
 
 export default MoviesPage;

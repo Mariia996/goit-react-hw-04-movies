@@ -42,6 +42,11 @@ class MovieCast extends Component {
     }
 }
 
+MovieCast.defaultProps = {
+    cast: [],
+    error: null
+}
+
 MovieCast.propTypes = {
     cast: PropTypes.array.isRequired,
     error: PropTypes.object

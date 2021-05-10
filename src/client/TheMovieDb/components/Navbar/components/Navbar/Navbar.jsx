@@ -6,10 +6,8 @@ import { menuItems } from './menuItems';
 
 import styles from './Navbar.module.css';
 
-const uniqueKey = shortid.generate();
-
 const Navbar = () => {
-    const navbarMenuElements = menuItems.map(item => <NavbarMenuItem key={uniqueKey} {...item}/>)
+    const navbarMenuElements = menuItems.map(item => <NavbarMenuItem key={shortid.generate()} {...item}/>)
     return (
         <nav className={styles.navbar}>
             <div className={styles.container}>

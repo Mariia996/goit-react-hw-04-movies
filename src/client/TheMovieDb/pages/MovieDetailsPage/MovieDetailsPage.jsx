@@ -7,7 +7,7 @@ import SingleMoviePage from '../Movies/pages/SingleMoviePage';
 import MovieCast from '../Movies/pages/MovieCast';
 import MovieReviews from '../Movies/pages/MovieReviews';
 
-// import { useHistory } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import styles from './MovieDetailsPage.module.css';
 
@@ -63,6 +63,18 @@ class MovieDetailsPage extends Component {
             </div>)
          );
     }
+}
+
+MovieDetailsPage.defaultProps = {
+    movie: [],
+    genres: [],
+    error: null
+}
+
+MovieDetailsPage.propTypes = {
+    movie: PropTypes.array.isRequired,
+    genres: PropTypes.array.isRequired,
+    error: PropTypes.object
 }
 
 export default MovieDetailsPage;
